@@ -140,41 +140,64 @@ body {
 }
 
 /* 📱 Responsive (mobile) */
-@media (max-width: 768px) {
-  .music-app {
+@media (max-width: 600px) {
+  .cover-and-info {
     flex-direction: column;
-    height: auto;
+    align-items: center;
+    gap: 1.5rem;
   }
-  .left-panel, .right-panel {
-    flex: unset;
-    width: 100%;
-  }
-  .right-panel {
-    border-left: none;
-    border-top: 1px solid #333;
-    max-height: 300px;
-  }
+
   #song-image {
     width: 220px;
     height: 220px;
   }
+
   .info {
     text-align: center;
+    max-width: 320px;
   }
+
   .info h2 {
     font-size: 1.5rem;
+    line-height: 1.4;
+    word-break: keep-all;
   }
+
   .info h3 {
     font-size: 1.2rem;
+    line-height: 1.4;
   }
+
   #song-members, #song-duration {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    word-break: keep-all;
   }
+
   #song-lyrics {
-    font-size: 1rem;
-  }
-  .song-item {
     font-size: 1.1rem;
-    padding: 1rem 1.5rem;
+    line-height: 1.6;
+    padding: 1rem;
+  }
+
+  .music-app {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel, .right-panel {
+    flex: unset;
+    width: 100%;
+  }
+
+  .right-panel {
+    border-left: none;
+    border-top: 1px solid #333;
+  }
+
+  .song-item {
+    font-size: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    word-break: keep-all;
   }
 }
