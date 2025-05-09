@@ -1,21 +1,41 @@
 body {
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
   background: #000;
   color: #fff;
+  overflow: hidden;
+}
+#intro-screen {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#intro-screen img {
+  width: 60%;
+  height: auto;
+  max-width: 600px;
+  object-fit: contain;
 }
 .header-banner img {
   width: 100%;
-  height: 100px;
-  object-fit: cover;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
   display: block;
+  background: #000;
 }
 .music-app {
   display: flex;
-  height: calc(100vh - 100px);
+  flex-direction: row;
+  height: calc(100vh - 160px);
+  overflow: hidden;
 }
 .left-panel {
-  flex: 1;
+  flex: 0.7;
   padding: 2rem;
   background: #000;
   display: flex;
@@ -26,13 +46,14 @@ body {
 .cover-and-info {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   max-width: 900px;
 }
 #song-image {
+  flex-shrink: 0;
   width: 280px;
   height: 280px;
   object-fit: cover;
@@ -41,15 +62,19 @@ body {
   border: 1px solid #444;
 }
 .info {
-  max-width: 500px;
+  flex-grow: 1;
+  min-width: 220px;
 }
 .info h2 {
   margin: 0.5rem 0 0.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 .info h3 {
   margin: 0 0 0.5rem;
   font-weight: 400;
   color: #ccc;
+  font-size: 1.15rem;
 }
 #song-members, #song-duration {
   font-size: 0.95rem;
@@ -66,23 +91,90 @@ body {
   width: 100%;
   max-width: 900px;
   margin-top: 2rem;
+  font-size: 0.95rem;
 }
 .right-panel {
-  flex: 0.6;
+  flex: 0.3;
   background: #000;
   overflow-y: auto;
   border-left: 1px solid #333;
+  min-width: 220px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
 }
 .song-item {
   padding: 1rem 1.5rem;
   cursor: pointer;
   border-bottom: 1px solid #222;
-  transition: background 0.2s;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transform: translateX(0);
+  position: relative;
+}
+.song-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #1db954;
+  transition: width 0.3s ease;
+}
+.song-item:hover::after {
+  width: 100%;
 }
 .song-item:hover {
   background: #181818;
+  transform: translateX(4px);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 .song-item.active {
   background: #222;
-  font-weight: bold;
+  font-weight: 600;
+  color: #1db954;
+}
+
+/* 📱 Responsive (mobile) */
+@media (max-width: 768px) {
+  .music-app {
+    flex-direction: column;
+    height: auto;
+  }
+  .left-panel, .right-panel {
+    flex: unset;
+    width: 100%;
+  }
+  .right-panel {
+    border-left: none;
+    border-top: 1px solid #333;
+    max-height: 300px;
+  }
+  #song-image {
+    width: 220px;
+    height: 220px;
+  }
+  .info {
+    text-align: center;
+  }
+  .info h2 {
+    font-size: 1.5rem;
+  }
+  .info h3 {
+    font-size: 1.2rem;
+  }
+  #song-members, #song-duration {
+    font-size: 1rem;
+  }
+  #song-lyrics {
+    font-size: 1rem;
+  }
+  .song-item {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
 }
