@@ -53,44 +53,48 @@ body {
   max-width: 900px;
 }
 #song-image {
-  flex-shrink: 0;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   object-fit: cover;
   border-radius: 10px;
   background-color: #000;
   border: 1px solid #444;
+  margin-bottom: 1.5rem;
 }
+
 .info {
-  flex-grow: 1;
-  min-width: 220px;
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
 }
+
 .info h2 {
-  margin: 0.5rem 0 0.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 600;
+  margin: 0.3rem 0;
 }
+
 .info h3 {
-  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #ccc;
-  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
 }
-#song-members, #song-duration {
-  font-size: 0.95rem;
+
+#song-members,
+#song-duration {
+  font-size: 1rem;
   color: #bbb;
   margin: 0.3rem 0;
 }
+
 #song-lyrics {
   background: #1e1e1e;
   padding: 1rem;
   border-radius: 6px;
   white-space: pre-wrap;
   color: #ddd;
-  text-align: left;
-  width: 100%;
-  max-width: 900px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   font-size: 0.95rem;
 }
 .right-panel {
@@ -140,64 +144,41 @@ body {
 }
 
 /* 📱 Responsive (mobile) */
-@media (max-width: 600px) {
-  .cover-and-info {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  #song-image {
-    width: 220px;
-    height: 220px;
-  }
-
-  .info {
-    text-align: center;
-    max-width: 320px;
-  }
-
-  .info h2 {
-    font-size: 1.5rem;
-    line-height: 1.4;
-    word-break: keep-all;
-  }
-
-  .info h3 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-
-  #song-members, #song-duration {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    word-break: keep-all;
-  }
-
-  #song-lyrics {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    padding: 1rem;
-  }
-
+@media (max-width: 768px) {
   .music-app {
     flex-direction: column;
     height: auto;
   }
-
   .left-panel, .right-panel {
     flex: unset;
     width: 100%;
   }
-
   .right-panel {
     border-left: none;
     border-top: 1px solid #333;
+    max-height: 300px;
   }
-
-  .song-item {
+  #song-image {
+    width: 220px;
+    height: 220px;
+  }
+  .info {
+    text-align: center;
+  }
+  .info h2 {
+    font-size: 1.5rem;
+  }
+  .info h3 {
     font-size: 1.2rem;
-    padding: 1.2rem 1.5rem;
-    word-break: keep-all;
+  }
+  #song-members, #song-duration {
+    font-size: 1rem;
+  }
+  #song-lyrics {
+    font-size: 1rem;
+  }
+  .song-item {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
   }
 }
