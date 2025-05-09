@@ -26,9 +26,31 @@ window.addEventListener('DOMContentLoaded', () => {
           title.textContent = song.title;
           artist.textContent = song.artist;
           image.src = song.image || "songs/img/default.jpg";
-          members.innerHTML = `<strong>멤버 구성:</strong><br>${Object.entries(song.instruments).map(([k, v]) => `${k}: ${v}`).join('<br>')}`;
+          members.innerHTML = `<strong>멤버 구성:</strong><br>` + 
+            Object.entries(song.instruments)
+              .map(([k, v]) => `<span><strong>${k}</strong>: ${v}</span>`)
+              .join(' ');
           duration.textContent = song.duration ? `곡 시간: ${song.duration}` : "";
-          lyrics.textContent = song.Lyrics || "가사가 준비 중입니다.";
+
+          // 📌 .txt 가사 파일 처리
+          if (song.Lyrics && song.Lyrics.endsWith('.txt')) {
+            fetch(song.Lyrics)
+              .then(res => res.text())
+              .then(text => {
+                lyrics.innerHTML = text
+                  .split('\n')
+                  .map(line => `<span>${line}</span>`)
+                  .join('');
+              })
+              .catch(() => {
+                lyrics.textContent = "가사를 불러오지 못했습니다.";
+              });
+          } else {
+            lyrics.innerHTML = (song.Lyrics || "가사가 준비 중입니다.")
+              .split('\n')
+              .map(line => `<span>${line}</span>`)
+              .join('');
+          }
         });
 
         list.appendChild(item);

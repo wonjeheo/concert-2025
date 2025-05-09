@@ -67,7 +67,7 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_05.jpg",
-    "Lyrics": ""
+    "Lyrics": "lyrics/coffee_shop.txt"
   },
   {
     "title": "Just",
@@ -80,7 +80,7 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_06.jpg",
-    "Lyrics": ""
+    "Lyrics": "lyrics/just.txt"
   },
   {
     "title": "파도",
@@ -188,7 +188,7 @@
       "드럼": "우은규"
     },
     "image": "songs/img/track_14.jpg",
-    "Lyrics": ""
+    "Lyrics": "lyrics/buttefly.txt"
   },
   {
     "title": "로켓트",
@@ -257,7 +257,7 @@
       "키보드": "김신욱"
     },
     "image": "songs/img/track_19.jpg",
-    "Lyrics": ""
+    "Lyrics": "lyrics/seperate ways.txt"
   },
   {
     "title": "우리의 밤은 당신의 낮보다 아름답다",
@@ -295,7 +295,7 @@
       "드럼": "배주영",
       "키보드": "천승욱"
     },
-    "Lyrics": "",
+    "Lyrics": "lyrics/오르트구름.txt",
     "image": "songs/img/track_22.jpg"
   },
   {
@@ -320,7 +320,7 @@
       "베이스": "우은규",
       "드럼": "박송이"
     },
-    "Lyrics": "",
+    "Lyrics": "lyrics/넌 내게 반했어.txt",
     "image": "songs/img/track_24.jpg"
   },
   {
@@ -333,7 +333,7 @@
       "드럼": "박송이",
       "키보드": "신아현"
     },
-    "Lyrics": "",
+    "Lyrics": "lyrics/삐딱하게.txt",
     "image": "songs/img/track_25.jpg"
   }
 ]
