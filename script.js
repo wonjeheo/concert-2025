@@ -7,6 +7,7 @@ fetch("data/songs.json")
     const members = document.getElementById("song-members");
     const lyrics = document.getElementById("song-lyrics");
     const image = document.getElementById("song-image");
+    const duration = document.getElementById("song-duration");
 
     songs.forEach((song, index) => {
       const item = document.createElement("div");
@@ -19,8 +20,9 @@ fetch("data/songs.json")
 
         title.textContent = song.title;
         artist.textContent = song.artist;
-        image.src = song.image;
+        image.src = song.image || "songs/img/default.jpg";
         members.innerHTML = `<strong>멤버 구성:</strong><br>${Object.entries(song.instruments).map(([k, v]) => `${k}: ${v}`).join('<br>')}`;
+        duration.textContent = song.duration ? `곡 시간: ${song.duration}` : "";
         lyrics.textContent = song.Lyrics || "가사가 준비 중입니다.";
       });
 

@@ -1,20 +1,155 @@
 <!-- 🎧 음원 앱 스타일 2열 인터페이스 -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
 <div class="header-banner">
   <img src="pictures/header_ready.png" alt="헤더 이미지">
 </div>
 
 <div class="music-app">
-  <div class="left-panel" id="detail-panel">
-    <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
-    <div class="info">
-      <h2 id="song-title">곡 제목</h2>
-      <h3 id="song-artist">아티스트</h3>
-      <p id="song-members">멤버 구성</p>
-      <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
+  <div class="left-panel">
+    <div class="cover-and-info">
+      <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
+      <div class="info">
+        <h2 id="song-title">곡 제목</h2>
+        <h3 id="song-artist">아티스트</h3>
+        <p id="song-members">멤버 구성</p>
+        <p id="song-duration">곡 시간</p>
+      </div>
     </div>
+    <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
   </div>
 
   <div class="right-panel" id="song-list">
     <!-- JS로 곡 목록이 채워짐 -->
   </div>
 </div>
+
+<script src="script.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+.header-banner img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  display: block;
+  background: #000;
+}
+.music-app {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 160px);
+  overflow: hidden;
+}
+.left-panel {
+  flex: 0.7;
+  padding: 2rem;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+.cover-and-info {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+#song-image {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #000;
+  border: 1px solid #444;
+}
+.info {
+  flex-grow: 1;
+  min-width: 220px;
+}
+.info h2 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.info h3 {
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+  color: #ccc;
+  font-size: 1.15rem;
+}
+#song-members, #song-duration {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin: 0.3rem 0;
+}
+#song-lyrics {
+  background: #1e1e1e;
+  padding: 1rem;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  color: #ddd;
+  text-align: left;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+.right-panel {
+  flex: 0.3;
+  background: #000;
+  overflow-y: auto;
+  border-left: 1px solid #333;
+  min-width: 220px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+.song-item {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  transform: translateX(0);
+  position: relative;
+}
+.song-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: #1db954;
+  transition: width 0.3s ease;
+}
+.song-item:hover::after {
+  width: 100%;
+}
+.song-item:hover {
+  background: #181818;
+  transform: translateX(4px);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.song-item.active {
+  background: #222;
+  font-weight: 600;
+  color: #1db954;
+}
+</style>

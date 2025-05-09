@@ -17,41 +17,58 @@ body {
 .left-panel {
   flex: 1;
   padding: 2rem;
-  background: #111;
+  background: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-y: auto;
 }
-.left-panel img {
-  width: 80%;
-  max-width: 300px;
-  height: 300px;
+.cover-and-info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 900px;
+}
+#song-image {
+  width: 280px;
+  height: 280px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  background-color: #000;
+  border: 1px solid #444;
 }
-.left-panel .info {
-  text-align: center;
+.info {
+  max-width: 500px;
 }
-.left-panel h2 {
+.info h2 {
   margin: 0.5rem 0 0.2rem;
 }
-.left-panel h3 {
-  margin: 0 0 1rem;
+.info h3 {
+  margin: 0 0 0.5rem;
   font-weight: 400;
   color: #ccc;
 }
-.left-panel pre {
+#song-members, #song-duration {
+  font-size: 0.95rem;
+  color: #bbb;
+  margin: 0.3rem 0;
+}
+#song-lyrics {
   background: #1e1e1e;
   padding: 1rem;
   border-radius: 6px;
   white-space: pre-wrap;
   color: #ddd;
   text-align: left;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 2rem;
 }
 .right-panel {
-  flex: 0.7;
+  flex: 0.6;
   background: #000;
   overflow-y: auto;
   border-left: 1px solid #333;
