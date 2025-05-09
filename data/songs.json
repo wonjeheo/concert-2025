@@ -170,9 +170,9 @@
     "instruments": {
       "보컬": "오원택",
       "기타": "고동빈",
-      "베이스": "박민준 (더블베이스)",
+      "더블베이스": "박민준",
       "드럼": "이아윤",
-      "이외": "박서형 (색소폰)"
+      "색소폰": "박서형"
     },
     "image": "songs/img/track_13.jpg",
     "Lyrics": ""
@@ -296,7 +296,7 @@
       "키보드": "천승욱"
     },
     "Lyrics": "lyrics/오르트구름.txt",
-    "image": "songs/img/track_22.jpg"
+    "image": "songs/img/track_22.png"
   },
   {
     "title": "새벽별",
