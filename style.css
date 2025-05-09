@@ -276,8 +276,3 @@ body {
   font-weight: 500;
   transition: 0.2s ease;
 }
-#like-button:hover {
-  background: #1db954;
-  color: #000;
-}
-
