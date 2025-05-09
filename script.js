@@ -37,10 +37,8 @@ window.addEventListener('DOMContentLoaded', () => {
             fetch(song.Lyrics)
               .then(res => res.text())
               .then(text => {
-                lyrics.innerHTML = text
-                  .split('\n')
-                  .map(line => `<span>${line}</span>`)
-                  .join('');
+                const lines = text.split('\n');
+                lyrics.innerHTML = lines.map(line => `<span>${line.trim()}</span>`).join('');
               })
               .catch(() => {
                 lyrics.textContent = "가사를 불러오지 못했습니다.";
