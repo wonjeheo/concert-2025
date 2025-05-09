@@ -1,30 +1,85 @@
-<!-- 🎧 음원 앱 스타일 2열 인터페이스 -->
+<!-- 🎧 입장 전 풀스크린 로딩 → 메인 페이지 전환 -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<div class="header-banner">
-  <img src="pictures/header_ready.png" alt="헤더 이미지">
+<div id="intro-screen">
+  <img src="pictures/concert_rgbzip.png" alt="로딩 헤더" />
 </div>
 
-<div class="music-app">
-  <div class="left-panel">
-    <div class="cover-and-info">
-      <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
-      <div class="info">
-        <h2 id="song-title">곡 제목</h2>
-        <h3 id="song-artist">아티스트</h3>
-        <p id="song-members">멤버 구성</p>
-        <p id="song-duration">곡 시간</p>
+<div id="main-content" style="display: none;">
+  <div class="header-banner">
+    <img src="pictures/header_ready.png" alt="헤더 이미지">
+  </div>
+
+  <div class="music-app">
+    <div class="left-panel">
+      <div class="cover-and-info">
+        <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
+        <div class="info">
+          <h2 id="song-title">곡 제목</h2>
+          <h3 id="song-artist">아티스트</h3>
+          <p id="song-members">멤버 구성</p>
+          <p id="song-duration">곡 시간</p>
+        </div>
       </div>
+      <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
     </div>
-    <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
-  </div>
 
-  <div class="right-panel" id="song-list">
-    <!-- JS로 곡 목록이 채워짐 -->
+    <div class="right-panel" id="song-list">
+      <!-- JS로 곡 목록이 채워짐 -->
+    </div>
   </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+  setTimeout(() => {
+    document.getElementById('intro-screen').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  }, 1800); // 1.8초 후 전환
+</script>
+<script>
+  setTimeout(() => {
+    document.getElementById('intro-screen').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  }, 1800);
+
+  // 곡 불러온 후 첫 곡 강제 선택
+  window.addEventListener('DOMContentLoaded', () => {
+    fetch("data/songs.json")
+      .then(res => res.json())
+      .then(songs => {
+        const list = document.getElementById("song-list");
+        const title = document.getElementById("song-title");
+        const artist = document.getElementById("song-artist");
+        const members = document.getElementById("song-members");
+        const lyrics = document.getElementById("song-lyrics");
+        const image = document.getElementById("song-image");
+        const duration = document.getElementById("song-duration");
+
+        songs.forEach((song, index) => {
+          const item = document.createElement("div");
+          item.className = "song-item";
+          item.textContent = `${index + 1}. ${song.title}`;
+
+          item.addEventListener("click", () => {
+            document.querySelectorAll('.song-item').forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+            title.textContent = song.title;
+            artist.textContent = song.artist;
+            image.src = song.image || "songs/img/default.jpg";
+            members.innerHTML = `<strong>멤버 구성:</strong><br>${Object.entries(song.instruments).map(([k, v]) => `${k}: ${v}`).join('<br>')}`;
+            duration.textContent = song.duration ? `곡 시간: ${song.duration}` : "";
+            lyrics.textContent = song.Lyrics || "가사가 준비 중입니다.";
+          });
+
+          list.appendChild(item);
+        });
+
+        // 첫 곡을 강제로 클릭 (깊은밤을 날아서)
+        const first = document.querySelector(".song-item");
+        if (first) first.click();
+      });
+  });
+</script>
 
 <style>
 body {
@@ -33,6 +88,21 @@ body {
   background: #000;
   color: #fff;
   overflow: hidden;
+}
+#intro-screen {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+#intro-screen img {
+  width: 60%;
+  height: auto;
+  max-width: 600px;
+  object-fit: contain;
 }
 .header-banner img {
   width: 100%;
