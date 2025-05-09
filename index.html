@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -23,6 +24,7 @@
 
     <div class="music-app">
       <div class="left-panel">
+        <!-- 🎵 곡 이미지 + 정보 -->
         <div class="cover-and-info">
           <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
           <div class="info">
@@ -32,12 +34,27 @@
             <p id="song-duration">곡 시간</p>
           </div>
         </div>
+
+        <!-- 감상평 + 등록 + 좋아요 -->
+        <div class="feedback-bar">
+          <input id="comment-input" placeholder="감상평을 남겨보세요..." />
+          <button id="submit-comment">등록</button>
+          <button id="like-button">❤️ <span id="like-count">0</span></button>
+        </div>
+
+        <!-- 감상평 목록 -->
+        <div id="comment-list"></div>
+
+        <!-- 가사 -->
         <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
       </div>
+
+      <!-- ⏩ 셋리스트 -->
       <div class="right-panel" id="song-list"></div>
+      </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

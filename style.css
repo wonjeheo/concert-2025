@@ -236,3 +236,48 @@ body {
     padding: 1rem 1.5rem;
   }
 }
+.feedback-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+#comment-input {
+  flex: 8; /* 감상평 입력 영역 */
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
+}
+
+#submit-comment {
+  flex: 1; /* 등록 버튼 */
+  background: #1db954;
+  color: black;
+  font-weight: 600;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+#like-button {
+  flex: 1; /* 좋아요 버튼 */
+  border: 1px solid #1db954;
+  color: #ff4d6d;
+  background: transparent;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+#like-button:hover {
+  background: #1db954;
+  color: #000;
+}
+
