@@ -69,13 +69,13 @@ body {
 }
 
 .info h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 600;
   margin: 0.3rem 0;
 }
 
 .info h3 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #ccc;
   margin-bottom: 0.5rem;
@@ -83,7 +83,7 @@ body {
 
 #song-members,
 #song-duration {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #bbb;
   margin: 0.3rem 0;
 }
@@ -95,7 +95,7 @@ body {
   white-space: pre-wrap;
   color: #ddd;
   margin-top: 1.5rem;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
 }
 .right-panel {
   flex: 0.3;
@@ -111,7 +111,7 @@ body {
   cursor: pointer;
   border-bottom: 1px solid #222;
   transition: all 0.25s ease;
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.4;
   font-weight: 400;
   font-family: 'Inter', sans-serif;

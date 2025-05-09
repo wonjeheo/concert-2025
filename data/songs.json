@@ -1,6 +1,6 @@
 [
   {
-    "title": "깊은밤을 날아서(오프닝)",
+    "title": "깊은밤을 날아서",
     "artist": "이문세",
     "session": "1부",
     "instruments": {
@@ -15,7 +15,7 @@
     "image": "songs/img/track_01.jpg"
   },
   {
-    "title": "joke!",
+    "title": "Joke!",
     "artist": "새소년",
     "session": "1부",
     "instruments": {
@@ -43,8 +43,8 @@
     "image": "songs/img/track_03.jpg"
   },
   {
-    "title": "ride",
-    "artist": "wave to earth",
+    "title": "Ride",
+    "artist": "Wave To Earth",
     "session": "1부",
     "instruments": {
       "보컬": "이준수",
@@ -58,7 +58,7 @@
   },
   {
     "title": "Coffee shop",
-    "artist": "RHCP",
+    "artist": "Red Hot Chilli Peppers",
     "session": "1부",
     "instruments": {
       "보컬": "김민재",
@@ -71,7 +71,7 @@
   },
   {
     "title": "Just",
-    "artist": "radiohead",
+    "artist": "Radiohead",
     "session": "1부",
     "instruments": {
       "보컬": "김민재",
@@ -137,7 +137,7 @@
     "Lyrics": ""
   },
   {
-    "title": "endless rain",
+    "title": "Endless Rain",
     "artist": "X-Japan",
     "session": "1부",
     "instruments": {
@@ -178,7 +178,7 @@
     "Lyrics": ""
   },
   {
-    "title": "butterfly(디지몬)",
+    "title": "Butterfly",
     "artist": "전영호",
     "session": "2부",
     "instruments": {
@@ -246,8 +246,8 @@
     "Lyrics": ""
   },
   {
-    "title": "seperate ways",
-    "artist": "journey",
+    "title": "Seperate Ways",
+    "artist": "Journey",
     "session": "2부",
     "instruments": {
       "보컬": "허원제",
@@ -324,7 +324,7 @@
     "image": "songs/img/track_24.jpg"
   },
   {
-    "title": "삐딱하게(앵콜)",
+    "title": "삐딱하게",
     "artist": "GD",
     "instruments": {
       "보컬": "송현우",
