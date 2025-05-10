@@ -13,7 +13,7 @@
     },
     "Lyrics": "",
     "image": "songs/img/track_01.jpg",
-    "duration": "4:35"
+    "duration": "3:03"
   },
   {
     "title": "Joke!",
@@ -27,7 +27,8 @@
       "키보드": "서강"
     },
     "Lyrics": "",
-    "image": "songs/img/track_02.jpg"
+    "image": "songs/img/track_02.jpg",
+    "duration":"3:22"
   },
   {
     "title": "긴꿈",
@@ -41,7 +42,8 @@
       "키보드": "서강"
     },
     "Lyrics": "",
-    "image": "songs/img/track_03.jpg"
+    "image": "songs/img/track_03.jpg",
+    "duration":"4:18"
   },
   {
     "title": "Ride",
@@ -55,7 +57,8 @@
       "키보드": "김신욱"
     },
     "Lyrics": "",
-    "image": "songs/img/track_04.jpg"
+    "image": "songs/img/track_04.jpg",
+    "duration":"3:47"
   },
   {
     "title": "Coffee shop",
@@ -68,7 +71,8 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_05.jpg",
-    "Lyrics": "lyrics/coffee_shop.txt"
+    "Lyrics": "lyrics/coffee_shop.txt",
+    "duration":"3:11"
   },
   {
     "title": "Just",
@@ -81,7 +85,8 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_06.jpg",
-    "Lyrics": "lyrics/just.txt"
+    "Lyrics": "lyrics/just.txt",
+    "duration":"3:54"
   },
   {
     "title": "파도",
@@ -94,7 +99,8 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_07.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"4:42"
   },
   {
     "title": "나침반",
@@ -108,7 +114,8 @@
       "키보드": "김신욱"
     },
     "image": "songs/img/track_08.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"2:46"
   },
   {
     "title": "DP",
@@ -121,7 +128,8 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_09.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"4:00"
   },
   {
     "title": "업라이징",
@@ -135,7 +143,8 @@
       "키보드": "장연우"
     },
     "image": "songs/img/track_10.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"5:04"
   },
   {
     "title": "Endless Rain",
@@ -149,7 +158,8 @@
       "키보드": "온가은"
     },
     "image": "songs/img/track_11.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"6:33"
   },
   {
     "title": "좋은 밤 좋은 꿈",
@@ -162,7 +172,8 @@
       "드럼": "권민철"
     },
     "image": "songs/img/track_12.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"4:26"
   },
   {
     "title": "From the start",
@@ -176,7 +187,8 @@
       "색소폰": "박서형"
     },
     "image": "songs/img/track_13.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"2:49"
   },
   {
     "title": "Butterfly",
@@ -189,7 +201,8 @@
       "드럼": "우은규"
     },
     "image": "songs/img/track_14.jpg",
-    "Lyrics": "lyrics/buttefly.txt"
+    "Lyrics": "lyrics/buttefly.txt",
+    "duration":"4:17"
   },
   {
     "title": "로켓트",
@@ -203,7 +216,8 @@
       "키보드": "박지현"
     },
     "image": "songs/img/track_15.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"3:40"
   },
   {
     "title": "See Your Eyes",
@@ -217,7 +231,8 @@
       "키보드": "박지현"
     },
     "image": "songs/img/track_16.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"3:11"
   },
   {
     "title": "눈이 마주쳤을 때",
@@ -230,7 +245,8 @@
       "드럼": "강민성"
     },
     "image": "songs/img/track_17.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"3:17"
   },
   {
     "title": "괴수의꽃노래",
@@ -244,7 +260,8 @@
       "키보드": "윤하경"
     },
     "image": "songs/img/track_18.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"3:43"
   },
   {
     "title": "Seperate Ways",
@@ -258,7 +275,8 @@
       "키보드": "김신욱"
     },
     "image": "songs/img/track_19.jpg",
-    "Lyrics": "lyrics/seperate ways.txt"
+    "Lyrics": "lyrics/seperate ways.txt",
+    "duration":"5:23"
   },
   {
     "title": "우리의 밤은 당신의 낮보다 아름답다",
@@ -271,7 +289,8 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_20.jpg",
-    "Lyrics": ""
+    "Lyrics": "",
+    "duration":"4:45"
   },
   {
     "title": "에잇",
@@ -284,7 +303,8 @@
       "키보드": "천승욱"
     },
     "Lyrics": "",
-    "image": "songs/img/track_21.jpg"
+    "image": "songs/img/track_21.jpg",
+    "duration":"2:47"
   },
   {
     "title": "오르트구름",
@@ -297,7 +317,8 @@
       "키보드": "천승욱"
     },
     "Lyrics": "lyrics/오르트구름.txt",
-    "image": "songs/img/track_22.png"
+    "image": "songs/img/track_22.png",
+    "duration":"3:26"
   },
   {
     "title": "새벽별",
@@ -310,7 +331,8 @@
       "키보드": "서강"
     },
     "Lyrics": "",
-    "image": "songs/img/track_23.jpg"
+    "image": "songs/img/track_23.jpg",
+    "duration":"4:29"
   },
   {
     "title": "넌 내게 반했어",
@@ -322,6 +344,7 @@
       "드럼": "박송이"
     },
     "Lyrics": "lyrics/넌 내게 반했어.txt",
-    "image": "songs/img/track_24.jpg"
+    "image": "songs/img/track_24.jpg",
+    "duration":"3:44"
   }
 ]
