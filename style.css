@@ -318,3 +318,8 @@ body {
     max-height: 300px;
   }
 }
+
+#main-content {
+  height: 100%;
+  overflow-y: auto;
+}
