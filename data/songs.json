@@ -322,18 +322,5 @@
     },
     "Lyrics": "lyrics/넌 내게 반했어.txt",
     "image": "songs/img/track_24.jpg"
-  },
-  {
-    "title": "삐딱하게",
-    "artist": "GD",
-    "instruments": {
-      "보컬": "송현우",
-      "기타": "허원제",
-      "베이스": "우은규",
-      "드럼": "박송이",
-      "키보드": "신아현"
-    },
-    "Lyrics": "lyrics/삐딱하게.txt",
-    "image": "songs/img/track_25.jpg"
   }
 ]
