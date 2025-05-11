@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const commentInput = document.getElementById("comment-input");
       const commentList = document.getElementById("comment-list");
       const submitComment = document.getElementById("submit-comment");
+      const description = document.getElementById("song-description")
 
       let currentSongKey = "";
 
@@ -57,6 +58,24 @@ window.addEventListener('DOMContentLoaded', () => {
               });
           } else {
             lyrics.innerHTML = (song.Lyrics || "가사가 준비 중입니다.")
+              .split('\n')
+              .map(line => `<span>${line}</span>`)
+              .join('');
+          }
+
+          // 곡 소개
+          if (song.description && song.description.endsWith('.txt')) {
+            fetch(song.description)
+              .then(res => res.text())
+              .then(text => {
+                const lines = text.split('\n');
+                description.innerHTML = lines.map(line => `<span>${line.trim()}</span>`).join('');
+              })
+              .catch(() => {
+                description.textContent = "곡 소개를 불러오지 못했습니다.";
+              });
+          } else {
+            description.innerHTML = (song.description || "곡 소개가 준비 중입니다.")
               .split('\n')
               .map(line => `<span>${line}</span>`)
               .join('');
