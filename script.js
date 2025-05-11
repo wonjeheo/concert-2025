@@ -75,7 +75,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 description.textContent = "곡 소개를 불러오지 못했습니다.";
               });
           } else {
-            description.innerHTML = (song.description || "곡 소개가 준비 중입니다.")
+            description.innerHTML = (song.description || " ")
               .split('\n')
               .map(line => `<span>${line}</span>`)
               .join('');
