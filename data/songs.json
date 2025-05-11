@@ -13,7 +13,8 @@
     },
     "Lyrics": "",
     "image": "songs/img/track_01.jpg",
-    "duration": "3:03"
+    "duration": "3:03",
+    "description":"description/깊은밤.txt"
   },
   {
     "title": "Joke!",
@@ -100,7 +101,8 @@
     },
     "image": "songs/img/track_07.jpg",
     "Lyrics": "",
-    "duration":"4:42"
+    "duration":"4:42",
+    "description":"description/wave.txt"
   },
   {
     "title": "나침반",
@@ -129,7 +131,8 @@
     },
     "image": "songs/img/track_09.jpg",
     "Lyrics": "",
-    "duration":"4:00"
+    "duration":"4:00",
+    "description":"description/dp.txt"
   },
   {
     "title": "업라이징",
@@ -173,7 +176,8 @@
     },
     "image": "songs/img/track_12.jpg",
     "Lyrics": "",
-    "duration":"4:26"
+    "duration":"4:26",
+    "description":"description/nerd.txt"
   },
   {
     "title": "From the start",
@@ -188,7 +192,8 @@
     },
     "image": "songs/img/track_13.jpg",
     "Lyrics": "",
-    "duration":"2:49"
+    "duration":"2:49",
+    "description":"description/from_the_start.txt"
   },
   {
     "title": "Butterfly",
@@ -217,7 +222,8 @@
     },
     "image": "songs/img/track_15.jpg",
     "Lyrics": "",
-    "duration":"3:40"
+    "duration":"3:40",
+    "description":"description/rocket.txt"
   },
   {
     "title": "See Your Eyes",
@@ -232,7 +238,8 @@
     },
     "image": "songs/img/track_16.jpg",
     "Lyrics": "",
-    "duration":"3:11"
+    "duration":"3:11",
+    "description":"description/see_your_eyes.txt"
   },
   {
     "title": "눈이 마주쳤을 때",
@@ -246,7 +253,8 @@
     },
     "image": "songs/img/track_17.jpg",
     "Lyrics": "",
-    "duration":"3:17"
+    "duration":"3:17",
+    "description":"description/dulli.txt"
   },
   {
     "title": "괴수의꽃노래",
