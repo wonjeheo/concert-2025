@@ -191,7 +191,7 @@
       "색소폰": "박서형"
     },
     "image": "songs/img/track_13.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/fomrthestart.txt",
     "duration":"2:49",
     "description":"description/from_the_start.txt"
   },
@@ -221,7 +221,7 @@
       "키보드": "박지현"
     },
     "image": "songs/img/track_15.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/rocket.txt",
     "duration":"3:40",
     "description":"description/rocket.txt"
   },
@@ -237,7 +237,7 @@
       "키보드": "박지현"
     },
     "image": "songs/img/track_16.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/seeyoureyes.txt",
     "duration":"3:11",
     "description":"description/see_your_eyes.txt"
   },
@@ -252,7 +252,7 @@
       "드럼": "강민성"
     },
     "image": "songs/img/track_17.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/dulli.txt",
     "duration":"3:17",
     "description":"description/dulli.txt"
   },
@@ -268,7 +268,7 @@
       "키보드": "윤하경"
     },
     "image": "songs/img/track_18.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/kaiju.txt",
     "duration":"3:43"
   },
   {
@@ -297,7 +297,7 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_20.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/thornapple.txt",
     "duration":"4:45"
   },
   {
@@ -310,7 +310,7 @@
       "드럼": "배주영",
       "키보드": "천승욱"
     },
-    "Lyrics": "",
+    "Lyrics": "lyrics/eight.txt",
     "image": "songs/img/track_21.jpg",
     "duration":"2:47"
   },
@@ -338,7 +338,7 @@
       "드럼": "권민철",
       "키보드": "서강"
     },
-    "Lyrics": "",
+    "Lyrics": "lyrics/dawnstar.txt",
     "image": "songs/img/track_23.jpg",
     "duration":"4:29"
   },
