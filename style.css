@@ -1,277 +1,307 @@
 /* 전체 박스 사이징 */
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 
 /* 기본 데스크탑 스크롤 차단 */
 body {
   margin: 0;
-  font-family: 'Inter','Noto Sans KR',sans-serif;
-  background: #000; color: #fff;
+  font-family: 'Inter', 'Noto Sans KR', sans-serif;
+  background: #000;
+  color: #fff;
   overflow: hidden;
 }
 
 /* 모바일 전체 페이지 스크롤 허용 */
 @media (max-width: 768px) {
-  body { overflow: auto; }
+  body {
+    overflow: auto;
+  }
 }
 
 /* 로딩 스크린 */
 #intro-screen {
-  width:100vw; height:100vh;
-  background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 #intro-screen img {
-  width:clamp(200px,50vw,600px);
-  height:auto;
-  object-fit:contain;
+  width: clamp(200px, 50vw, 600px);
+  height: auto;
+  object-fit: contain;
 }
 
 /* 헤더 배너 */
 .header-banner {
-  width:100%; text-align:left;
+  width: 100%;
+  text-align: left;
 }
 .header-banner img {
-  width:100%; height:clamp(100px,10vh,160px);
-  object-fit:contain;
-  display:block; background:#000;
+  width: 100%;
+  height: clamp(100px, 10vh, 160px);
+  object-fit: contain;
+  display: block;
+  background: #000;
 }
 
 /* 메인 레이아웃 */
 .music-app {
-  display:flex;
-  flex-direction:row;
-  height:calc(100vh - clamp(100px,10vh,160px));
-  width:100%;
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - clamp(100px, 10vh, 160px));
+  width: 100%;
 }
 
 /* 좌측 패널 */
 .left-panel {
-  flex:0 0 70%;
-  padding:clamp(1rem,2vw,2rem);
-  background:#000;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  overflow-y:auto;
-  max-height:100%;
+  flex: 0 0 70%;
+  padding: clamp(1rem, 2vw, 2rem);
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 /* 커버+네비+정보 컨테이너 */
 .cover-and-info {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:flex-start;
-  justify-content:center;
-  gap:clamp(1rem,2vw,2rem);
-  width:90%; max-width:900px;
-  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 2rem);
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 이미지 래퍼 (데스크탑·모바일 공통) */
+.image-nav-wrapper {
+  position: relative;
+  width: clamp(260px, 30vw, 300px);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto clamp(1rem, 2vw, 1.5rem);
+  overflow: visible;
+}
+.image-nav-wrapper img,
+#song-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #000;
+  border: 1px solid #444;
+}
+
+/* 이전/다음 버튼 (데스크탑·모바일 공통) */
+.image-nav-wrapper .nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  width: clamp(2rem, 3vw, 3rem);
+  height: clamp(2rem, 3vw, 3rem);
+  transform: translateY(-50%);
+  background: none;
+  border: 2px solid #1db954;
+  color: #1db954;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.image-nav-wrapper .nav-prev {
+  left: 0;
+  transform: translate(-120%, -50%);
+}
+.image-nav-wrapper .nav-next {
+  right: 0;
+  transform: translate(120%, -50%);
 }
 
 /* 정보 텍스트 */
 .info {
-  width:90%; max-width:900px;
-  text-align:left; margin:0 auto;
+  width: 90%;
+  max-width: 900px;
+  text-align: left;
+  margin: 0 auto;
 }
 .info h2 {
-  font-size:clamp(1.5rem,4vw,2.5rem);
-  font-weight:600; margin:clamp(0.2rem,1vh,0.3rem) 0;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 600;
+  margin: clamp(0.2rem, 1vh, 0.3rem) 0;
 }
 .info h3 {
-  font-size:clamp(1.2rem,3vw,2rem);
-  font-weight:400; color:#ccc;
-  margin-bottom:clamp(0.3rem,1vh,0.5rem);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: clamp(0.3rem, 1vh, 0.5rem);
 }
 #song-members {
-  display:flex; flex-wrap:wrap;
-  gap:clamp(0.5rem,1vw,0.8rem);
-  font-size:clamp(0.9rem,2vw,1rem);
-  color:#ccc; margin:clamp(0.5rem,1vh,0.8rem) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1vw, 0.8rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #ccc;
+  margin: clamp(0.5rem, 1vh, 0.8rem) 0;
 }
 #song-duration {
-  font-size:clamp(1rem,2vw,1.3rem);
-  color:#bbb; margin:clamp(0.2rem,1vh,0.3rem) 0;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #bbb;
+  margin: clamp(0.2rem, 1vh, 0.3rem) 0;
 }
 
 /* 가사 */
 #song-lyrics {
-  background:#1e1e1e;
-  padding:clamp(1rem,2vw,1.5rem);
-  border-radius:12px;
-  white-space:pre-wrap;
-  color:#eee; text-align:left;
-  line-height:1.8;
-  font-size:clamp(1.2rem,3vw,1.5rem);
-  width:90%; max-width:900px;
-  margin:clamp(1rem,2vh,2rem) auto 0;
-  box-shadow:0 0 8px rgba(0,0,0,0.4);
-  overflow-y:auto;
-  max-height:30vh;
+  background: #1e1e1e;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 12px;
+  white-space: pre-wrap;
+  color: #eee;
+  text-align: left;
+  line-height: 1.8;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  width: 90%;
+  max-width: 900px;
+  margin: clamp(1rem, 2vh, 2rem) auto 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  max-height: 30vh;
 }
+/* 전역: 각 줄마다 스팬으로 분리 */
 #song-lyrics span {
   display: block;
   white-space: pre-wrap;
 }
-@media (hover:hover) and (pointer:fine) {
+@media (hover: hover) and (pointer: fine) {
   #song-lyrics span:hover {
-    background:rgba(255,255,255,0.1);
-    transform:scale(1.02);
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
   }
 }
 
 /* 우측 패널(셋리스트) */
 .right-panel {
-  flex:0 0 30%;
-  background:#000;
-  overflow-y:auto;
-  border-left:1px solid #333;
-  min-width:20%;
-}
-@media (max-width: 768px) {
-  .right-panel {
-    max-height:35vh;
-    overflow-y:auto;
-    border-left:none;
-    border-top:1px solid #333;
-  }
+  flex: 0 0 30%;
+  background: #000;
+  overflow-y: auto;
+  border-left: 1px solid #333;
+  min-width: 20%;
 }
 
 /* 리스트 아이템 */
 .song-item {
-  padding:clamp(0.75rem,2vw,1rem) clamp(1rem,3vw,1.5rem);
-  cursor:pointer;
-  border-bottom:1px solid #222;
-  font-size:clamp(1.2rem,3vw,1.5rem);
-  line-height:1.4;
-  position:relative;
+  padding: clamp(0.75rem, 2vw, 1rem) clamp(1rem, 3vw, 1.5rem);
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.4;
+  position: relative;
 }
 .song-item::after {
-  content:'';
-  position:absolute;
-  bottom:0; left:0;
-  height:2px; width:0;
-  background:#1db954;
-  transition:width .3s;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #1db954;
+  transition: width 0.3s;
 }
-@media (hover:hover) and (pointer:fine) {
-  .song-item:hover::after { width:100%; }
+@media (hover: hover) and (pointer: fine) {
+  .song-item:hover::after {
+    width: 100%;
+  }
   .song-item:hover {
-    background:#181818;
-    transform:translateX(4px);
-    font-weight:500;
-    letter-spacing:.3px;
+    background: #181818;
+    transform: translateX(4px);
+    font-weight: 500;
+    letter-spacing: 0.3px;
   }
 }
 .song-item.active {
-  background:#222;
-  color:#1db954;
-  font-weight:600;
+  background: #222;
+  color: #1db954;
+  font-weight: 600;
 }
 
 /* 피드백 바 */
 .feedback-bar {
-  display:flex; gap:clamp(0.5rem,2vw,1rem);
-  width:90%; max-width:900px;
-  margin:clamp(1rem,2vh,1.2rem) auto 0;
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  width: 90%;
+  max-width: 900px;
+  margin: clamp(1rem, 2vh, 1.2rem) auto 0;
 }
 #comment-input {
-  flex:8;
-  padding:clamp(0.5rem,1vw,1rem) clamp(1rem,3vw,1rem);
-  font-size:clamp(1rem,2vw,1.2rem);
-  border-radius:6px; border:1px solid #444;
-  background:#111; color:#fff;
+  flex: 8;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 3vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #111;
+  color: #fff;
 }
 #submit-comment {
-  flex-shrink:0;
-  white-space:nowrap;
-  padding:clamp(0.5rem,1vw,1rem);
-  background:#1db954; color:#000;
-  font-weight:600; border:none; border-radius:6px;
-  cursor:pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  background: #1db954;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 #like-button {
-  flex:1;
-  padding:clamp(0.5rem,1vw,1rem);
-  font-size:clamp(1rem,2vw,1.2rem);
-  border:1px solid #1db954;
-  color:#ff4d6d; background:transparent;
-  border-radius:6px;
+  flex: 1;
+  padding: clamp(0.5rem, 1vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  border: 1px solid #1db954;
+  color: #ff4d6d;
+  background: transparent;
+  border-radius: 6px;
 }
 
-/* 이전/다음 버튼 숨김(데스크톱) */
+/* 이전/다음 버튼 숨김(기본) */
 .nav-button {
-  display:none;
+  display: none;
 }
 
-/* 모바일 전용 네비게이션 */
-@media (max-width:768px) {
-  /* 1) 커버 래퍼 정사각, overflow visible */
-  .image-nav-wrapper {
-    position:relative;
-    width:clamp(180px,80vw,260px);
-    aspect-ratio:1/1;
-    margin:0 auto clamp(1rem,4vw,2rem);
-    overflow:visible;
-  }
-  .image-nav-wrapper img {
-    width:100%; height:100%;
-    object-fit:cover; border-radius:10px;
+/* 모바일 전용 레이아웃 */
+@media (max-width: 768px) {
+  /* 우측 셋리스트 높이 조정 */
+  .right-panel {
+    max-height: 25vh;
+    overflow-y: auto;
+    border-left: none;
+    border-top: 1px solid #333;
   }
 
-  /* 2) 버튼 배치 */
-  .image-nav-wrapper .nav-button {
-    display:flex;
-    align-items:center; justify-content:center;
-    position:absolute; top:50%;
-    width:clamp(2rem,8vw,3rem);
-    height:clamp(2rem,8vw,3rem);
-    background:none;
-    border:2px solid #1db954;
-    color:#1db954;
-    font-size:clamp(1.2rem,4vw,2rem);
-    border-radius:50%; cursor:pointer;
-    transform:translateY(-50%);
-    z-index:10;
-  }
-  .image-nav-wrapper .nav-prev {
-    left:0; transform:translate(-120%,-50%);
-  }
-  .image-nav-wrapper .nav-next {
-    right:0; transform:translate(120%,-50%);
-  }
-
-  /* 3) 레이아웃 스택 & 헤더 중앙 */
-  .music-app {
-    flex-direction:column; height:auto; overflow:visible;
-  }
-  .left-panel, .right-panel {
-    width:100%; overflow:visible; border:none;
-  }
-  .header-banner { text-align:center; }
-  .header-banner img { max-width:90vw; margin:0 auto; }
-
-  /* 4) 우측·가사·댓글 스크롤 */
-  .right-panel { max-height:15vh; overflow-y:auto; }
-  #song-lyrics { max-height:30vh; overflow-y:auto; }
-  #comment-list { max-height:20vh; overflow-y:auto; }
-
-  /* 5) 피드백바 가로 고정 */
-  .feedback-bar {
-    display:flex!important;
-    flex-direction:row!important;
-    flex-wrap:nowrap!important;
-  }
-  #song-lyrics span {
-  display: block;       /* each span on its own line */
-  white-space: pre-wrap;/* respect the original newline characters */
-  }
+  /* 가사 글꼴 예쁘게 */
   #song-lyrics {
-    font-family:'Inter', 'Noto Serif KR', sans-serif;
+    font-family: 'Nanum Gothic', 'Noto Serif KR', sans-serif;
     font-size: clamp(1rem, 3.5vw, 1.3rem);
     line-height: 1.7;
   }
-  #submit-comment { white-space:nowrap; flex-shrink:0; }
+
+  /* 피드백바 가로 고정 */
+  .feedback-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+  #submit-comment {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
 }
