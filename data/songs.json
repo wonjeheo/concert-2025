@@ -130,7 +130,7 @@
       "드럼": "이아윤"
     },
     "image": "songs/img/track_09.jpg",
-    "Lyrics": "",
+    "Lyrics": "lyrics/DP.txt",
     "duration":"4:00",
     "description":"description/dp.txt"
   },
