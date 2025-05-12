@@ -250,7 +250,7 @@ body {
   .header-banner img { max-width:90vw; margin:0 auto; }
 
   /* 4) 우측·가사·댓글 스크롤 */
-  .right-panel { max-height:35vh; overflow-y:auto; }
+  .right-panel { max-height:13vh; overflow-y:auto; }
   #song-lyrics { max-height:30vh; overflow-y:auto; }
   #comment-list { max-height:20vh; overflow-y:auto; }
 
@@ -263,6 +263,11 @@ body {
   #song-lyrics span {
   display: block;       /* each span on its own line */
   white-space: pre-wrap;/* respect the original newline characters */
+  }
+  #song-lyrics {
+    font-family:'Inter', 'Noto Serif KR', sans-serif;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    line-height: 1.7;
   }
   #submit-comment { white-space:nowrap; flex-shrink:0; }
 }
