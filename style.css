@@ -260,6 +260,9 @@ body {
     flex-direction:row!important;
     flex-wrap:nowrap!important;
   }
-  
+  #song-lyrics span {
+  display: block;       /* each span on its own line */
+  white-space: pre-wrap;/* respect the original newline characters */
+  }
   #submit-comment { white-space:nowrap; flex-shrink:0; }
 }
