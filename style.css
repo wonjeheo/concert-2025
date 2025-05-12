@@ -189,3 +189,28 @@ body {
   font-weight: 600;
   color: #1db954;
 }
+.feedback-bar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+#comment-input {
+  flex: 8;
+  padding: 0.8rem 1.2rem; /* 살짝 키움 */
+  font-size: 1.4rem;
+}
+
+#submit-comment {
+  flex: 1;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+}
+
+#like-button {
+  flex: 1;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+}
