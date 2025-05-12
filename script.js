@@ -4,6 +4,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-firestore.js";
 
 window.addEventListener('DOMContentLoaded', () => {
+  // 로딩 후 본문 표시
   setTimeout(() => {
     document.getElementById('intro-screen').style.display = 'none';
     document.getElementById('main-content').style.display = 'block';
@@ -12,58 +13,56 @@ window.addEventListener('DOMContentLoaded', () => {
   fetch("data/songs.json")
     .then(res => res.json())
     .then(songs => {
-      const list = document.getElementById("song-list");
-      const title = document.getElementById("song-title");
-      const artist = document.getElementById("song-artist");
-      const members = document.getElementById("song-members");
-      const lyrics = document.getElementById("song-lyrics");
-      const image = document.getElementById("song-image");
-      const duration = document.getElementById("song-duration");
-      const likeBtn = document.getElementById("like-button");
-      const likeCount = document.getElementById("like-count");
-      const commentInput = document.getElementById("comment-input");
-      const commentList = document.getElementById("comment-list");
+      const list       = document.getElementById("song-list");
+      const title      = document.getElementById("song-title");
+      const artist     = document.getElementById("song-artist");
+      const members    = document.getElementById("song-members");
+      const lyrics     = document.getElementById("song-lyrics");
+      const image      = document.getElementById("song-image");
+      const duration   = document.getElementById("song-duration");
+      const likeBtn    = document.getElementById("like-button");
+      const likeCount  = document.getElementById("like-count");
+      const commentInput  = document.getElementById("comment-input");
+      const commentList   = document.getElementById("comment-list");
       const submitComment = document.getElementById("submit-comment");
-      const description = document.getElementById("song-description")
+      const description = document.getElementById("song-description");
+      const prevBtn    = document.querySelector('.nav-prev');
+      const nextBtn    = document.querySelector('.nav-next');
 
+      let currentIndex = 0;
       let currentSongKey = "";
 
+      // 셋리스트 렌더링
       songs.forEach((song, index) => {
         const item = document.createElement("div");
         item.className = "song-item";
+        item.dataset.index = index;
         item.textContent = `${index + 1}. ${song.title}`;
+        item.addEventListener("click", () => loadSong(index));
+        list.appendChild(item);
+      });
 
-        item.addEventListener("click", async () => {
-          document.querySelectorAll('.song-item').forEach(el => el.classList.remove('active'));
-          item.classList.add('active');
-          title.textContent = song.title;
-          artist.textContent = song.artist;
-          image.src = song.image || "songs/img/default.jpg";
-          members.innerHTML = `<strong>멤버 구성:</strong><br>` + 
-            Object.entries(song.instruments)
-              .map(([k, v]) => `<span><strong>${k}</strong>: ${v}</span>`)
-              .join(' ');
-          duration.textContent = song.duration ? `곡 시간: ${song.duration}` : "";
+      // 곡 로드 함수
+      function loadSong(idx) {
+        if (idx < 0 || idx >= songs.length) return;
+        currentIndex = idx;
+        const song = songs[idx];
 
-          // 가사
-          if (song.Lyrics && song.Lyrics.endsWith('.txt')) {
-            fetch(song.Lyrics)
-              .then(res => res.text())
-              .then(text => {
-                const lines = text.split('\n');
-                lyrics.innerHTML = lines.map(line => `<span>${line.trim()}</span>`).join('');
-              })
-              .catch(() => {
-                lyrics.textContent = "가사를 불러오지 못했습니다.";
-              });
-          } else {
-            lyrics.innerHTML = (song.Lyrics || "가사가 준비 중입니다.")
-              .split('\n')
-              .map(line => `<span>${line}</span>`)
-              .join('');
-          }
+        // 활성화 상태 토글
+        document.querySelectorAll('.song-item')
+          .forEach(el => el.classList.remove('active'));
+        list.querySelector(`[data-index='${idx}']`)
+          .classList.add('active');
 
-          // 곡 소개
+        // 정보 업데이트
+        title.textContent   = song.title;
+        artist.textContent  = song.artist;
+        image.src           = song.image || "songs/img/default.jpg";
+        members.innerHTML   = `<strong>멤버 구성:</strong><br>` +
+          Object.entries(song.instruments)
+            .map(([k,v]) => `<span><strong>${k}</strong>: ${v}</span>`)
+            .join(' ');
+        duration.textContent = song.duration ? `곡 시간: ${song.duration}` : "";
           if (song.description && song.description.endsWith('.txt')) {
             fetch(song.description)
               .then(res => res.text())
@@ -81,47 +80,62 @@ window.addEventListener('DOMContentLoaded', () => {
               .join('');
           }
 
-          // Firestore 연결
-          currentSongKey = song.title.replace(/\s+/g, "_");
+        // 가사 로드
+        if (song.Lyrics && song.Lyrics.endsWith('.txt')) {
+          fetch(song.Lyrics)
+            .then(r => r.text())
+            .then(text => {
+              lyrics.innerHTML = text
+                .split('\n')
+                .map(l => `<span>${l.trim()}</span>`)
+                .join('');
+            });
+        } else {
+          lyrics.innerHTML = (song.Lyrics || "가사가 준비 중입니다.")
+            .split('\n')
+            .map(l => `<span>${l}</span>`)
+            .join('');
+        }
 
-          const likeDoc = doc(db, "songMeta", currentSongKey);
-          const likeSnap = await getDoc(likeDoc);
-          likeCount.textContent = likeSnap.exists() ? likeSnap.data().likes || 0 : 0;
-
-          // 감상평 로드
+        // Firestore 메타
+        currentSongKey = song.title.replace(/\s+/g, "_");
+        const metaDoc = doc(db, "songMeta", currentSongKey);
+        getDoc(metaDoc).then(snap => {
+          likeCount.textContent = snap.exists() ? snap.data().likes || 0 : 0;
           commentList.innerHTML = "";
-          if (likeSnap.exists() && likeSnap.data().comments) {
-            likeSnap.data().comments.forEach(c => {
+          if (snap.exists() && snap.data().comments) {
+            snap.data().comments.forEach(c => {
               commentList.innerHTML += `<div>${c}</div>`;
             });
           }
         });
+      }
 
-        list.appendChild(item);
-      });
+      // 이전/다음 클릭
+      prevBtn.addEventListener('click', () => loadSong(currentIndex - 1));
+      nextBtn.addEventListener('click', () => loadSong(currentIndex + 1));
 
-      // 첫 곡 선택
-      const first = document.querySelector(".song-item");
-      if (first) first.click();
+      // 최초 로드
+      loadSong(0);
 
       // 좋아요
-      likeBtn.onclick = async () => {
+      likeBtn.addEventListener('click', async () => {
         if (!currentSongKey || localStorage.getItem(`liked_${currentSongKey}`)) return;
         const ref = doc(db, "songMeta", currentSongKey);
         await setDoc(ref, { likes: increment(1) }, { merge: true });
         const snap = await getDoc(ref);
         likeCount.textContent = snap.data().likes || 0;
         localStorage.setItem(`liked_${currentSongKey}`, "true");
-      };
+      });
 
       // 감상평 등록
-      submitComment.onclick = async () => {
+      submitComment.addEventListener('click', async () => {
         const text = commentInput.value.trim();
-        if (!text || !currentSongKey) return;
+        if (!text) return;
         const ref = doc(db, "songMeta", currentSongKey);
         await setDoc(ref, { comments: arrayUnion(text) }, { merge: true });
         commentList.innerHTML += `<div>${text}</div>`;
         commentInput.value = "";
-      };
+      });
     });
 });
