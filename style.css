@@ -173,7 +173,7 @@ body {
 /* 피드백 바 */
 .feedback-bar {
   display:flex; gap:clamp(0.5rem,2vw,1rem);
-  width:90%; max-width:900px;
+  width:80%; max-width:900px;
   margin:clamp(1rem,2vh,1.2rem) auto 0;
 }
 #comment-input {
@@ -205,7 +205,9 @@ body {
   display:none;
 }
 
+
 /* 모바일 전용 네비게이션 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 @media (max-width:768px) {
   /* 1) 커버 래퍼 정사각, overflow visible */
   .image-nav-wrapper {
@@ -259,18 +261,49 @@ body {
 
   /* 5) 피드백바 가로 고정 */
   .feedback-bar {
-    display:flex!important;
-    flex-direction:row!important;
-    flex-wrap:nowrap!important;
+    width: 95%;              /* 가로 폭 살짝 확대 */
+    margin: clamp(0.5rem,2vh,0.8rem) auto 0;
+    gap: clamp(0.25rem,1vw,0.5rem);
+    align-items: center;
   }
-  #song-lyrics span {
-  display: block;       /* each span on its own line */
-  white-space: pre-wrap;/* respect the original newline characters */
+  #comment-input {
+    padding: clamp(0.25rem,0.5vw,0.4rem) clamp(0.75rem,2vw,1rem);
+    font-size: clamp(0.9rem,1.5vw,1.1rem);
   }
+  #submit-comment {
+    padding: clamp(0.25rem,0.5vw,0.4rem) clamp(0.75rem,2vw,1rem);
+    font-size: clamp(0.9rem,1.5vw,1.1rem);
+  }
+  #like-button {
+    padding: clamp(0.25rem,0.5vw,0.4rem) clamp(0.5rem,1vw,0.75rem);
+    font-size: clamp(0.9rem,1.5vw,1.1rem);
+  }
+
+  /* 2) 가사 좌우 폭 늘려서 마진 축소 */
   #song-lyrics {
-    font-family:'Inter', 'Noto Serif KR', sans-serif;
-    font-size: clamp(1rem, 3.5vw, 1.3rem);
-    line-height: 1.7;
+    width: 100%;
+    font-family: 'Inter','Noto Sans KR',sans-serif;
+    padding: clamp(0.75rem,2vw,1rem);
+    margin: clamp(0.5rem,1vh,1rem) auto;
   }
-  #submit-comment { white-space:nowrap; flex-shrink:0; }
+
+  /* 3) span 호버/터치 강조 항상 활성화 */
+  #song-lyrics span:hover,
+  #song-lyrics span:active {
+    background: rgba(255,255,255,0.1);
+    transform: scale(1.02);
+  }
+
+  /* 4) 스크롤바 스타일 & 호버 효과 */
+  #song-lyrics::-webkit-scrollbar {
+    width: 6px;
+  }
+  #song-lyrics::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+    transition: background .3s;
+  }
+  #song-lyrics::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.4);
+  }
 }
