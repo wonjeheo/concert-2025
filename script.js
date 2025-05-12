@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const lyrics = document.getElementById("song-lyrics");
       const image = document.getElementById("song-image");
       const duration = document.getElementById("song-duration");
+      const description = document.getElementById("song-description")
       const likeBtn = document.getElementById("like-button");
       const likeCount = document.getElementById("like-count");
       const commentInput = document.getElementById("comment-input");
@@ -74,6 +75,25 @@ window.addEventListener('DOMContentLoaded', () => {
             .join('');
           lyrics.scrollTop = 0;
         }
+
+        // 곡 소개
+          if (song.description && song.description.endsWith('.txt')) {
+            fetch(song.description)
+              .then(res => res.text())
+              .then(text => {
+                const lines = text.split('\n');
+                description.innerHTML = lines.map(line => `<span>${line.trim()}</span>`).join('');
+              })
+              .catch(() => {
+                description.textContent = "곡 소개를 불러오지 못했습니다.";
+              });
+          } else {
+            description.innerHTML = (song.description || "곡 소개가 준비 중입니다.")
+            description.innerHTML = (song.description || " ")
+              .split('\n')
+              .map(line => `<span>${line}</span>`)
+              .join('');
+          }
 
         // Firestore meta
         currentSongKey = song.title.replace(/\s+/g, "_");
