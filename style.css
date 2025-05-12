@@ -260,5 +260,6 @@ body {
     flex-direction:row!important;
     flex-wrap:nowrap!important;
   }
+  
   #submit-comment { white-space:nowrap; flex-shrink:0; }
 }
