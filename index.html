@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="color-scheme" content="dark light">
-  <title>RGB.zip Setlist</title>
+  <title>RGB 콘서트 세트리스트</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- 🎧 입장 전 풀스크린 로딩 -->
+  <!-- 로딩 스크린 -->
   <div id="intro-screen">
     <img src="pictures/concert_rgbzip.png" alt="로딩 헤더" />
   </div>
 
-  <!-- 🎵 메인 콘텐츠 -->
+  <!-- 메인 콘텐츠 -->
   <div id="main-content" style="display: none;">
     <div class="header-banner">
       <img src="pictures/header_ready.png" alt="헤더 이미지">
@@ -24,9 +22,13 @@
 
     <div class="music-app">
       <div class="left-panel">
-        <!-- 🎵 곡 이미지 + 정보 -->
+        <!-- 커버 + 네비 + 정보 -->
         <div class="cover-and-info">
-          <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
+          <div class="image-nav-wrapper">
+            <button class="nav-button nav-prev" aria-label="이전 곡">←</button>
+            <img id="song-image" src="songs/img/default.jpg" alt="커버 이미지" />
+            <button class="nav-button nav-next" aria-label="다음 곡">→</button>
+          </div>
           <div class="info">
             <h2 id="song-title">곡 제목</h2>
             <h3 id="song-artist">아티스트</h3>
@@ -36,25 +38,25 @@
           </div>
         </div>
 
-        <!-- 감상평 + 등록 + 좋아요 -->
+        <!-- 피드백 바 -->
         <div class="feedback-bar">
           <input id="comment-input" placeholder="감상평을 남겨보세요..." />
           <button id="submit-comment">등록</button>
           <button id="like-button">❤️ <span id="like-count">0</span></button>
         </div>
 
-        <!-- 감상평 목록 -->
+        <!-- 댓글 목록 -->
         <div id="comment-list"></div>
 
         <!-- 가사 -->
         <pre id="song-lyrics">가사가 여기에 표시됩니다</pre>
       </div>
 
-      <!-- ⏩ 셋리스트 -->
+      <!-- 셋리스트 -->
       <div class="right-panel" id="song-list"></div>
-      </div>
     </div>
   </div>
+
   <script type="module" src="firebase.js"></script>
   <script type="module" src="script.js"></script>
 </body>
