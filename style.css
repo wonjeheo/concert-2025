@@ -111,6 +111,10 @@ body {
   overflow-y:auto;
   max-height:30vh;
 }
+#song-lyrics span {
+  display: block;
+  white-space: pre-wrap;
+}
 @media (hover:hover) and (pointer:fine) {
   #song-lyrics span:hover {
     background:rgba(255,255,255,0.1);
