@@ -1,157 +1,164 @@
 [
   {
-    "title": "깊은밤을 날아서",
-    "artist": "이문세",
+    "title": "Afro blue",
+    "artist": "Robert Glasper Experiment",
     "session": "1부",
     "instruments": {
-      "보컬": "최봄",
-      "기타": "김효민",
-      "베이스": "이찬민",
-      "드럼": "조용준",
-      "키보드": "서강",
+      "보컬": "김민성",
+      "기타": "신아현",
+      "베이스": "김혜원",
+      "드럼": "권민철",
+      "키보드": "박서형",
       "플룻": "김기찬"
     },
-    "Lyrics": "lyrics/night.txt",
+    "Lyrics": "lyrics/afro.txt",
     "image": "songs/img/track_01.jpg",
-    "duration": "3:03",
-    "description":"description/깊은밤.txt"
+    "duration": "5:08",
+    "description":"description/afro.txt"
   },
   {
-    "title": "Joke!",
-    "artist": "새소년",
+    "title": "ringringring",
+    "artist": "surl",
     "session": "1부",
     "instruments": {
-      "보컬": "최승아",
-      "기타": "김태환",
-      "베이스": "문이빈",
-      "드럼": "이아윤",
-      "키보드": "서강"
+      "보컬": "김민성",
+      "기타": "신아현, 김민성",
+      "베이스": "김혜원",
+      "드럼": "권민철",
+      "키보드": "박서형"
     },
-    "Lyrics": "lyrics/joke.txt",
+    "Lyrics": "lyrics/ring.txt",
     "image": "songs/img/track_02.jpg",
-    "duration":"3:22"
+    "duration":"3:47",
+    "description":"description/ring.txt"
   },
   {
-    "title": "긴꿈",
-    "artist": "새소년",
+    "title": "잔혹한 천사의 테제",
+    "artist": "타카하시 요코",
     "session": "1부",
     "instruments": {
-      "보컬": "최승아",
-      "기타": "김태환",
+      "보컬": "장연우",
+      "기타": "김성수, 심영민",
+      "베이스": "이휘성",
+      "드럼": "이아윤",
+      "키보드": "윤하경"
+    },
+    "Lyrics": "lyrics/angel.txt",
+    "image": "songs/img/track_03.jpg"
+  },
+  {
+    "title": "본능",
+    "artist": "시이나 링고",
+    "session": "1부",
+    "instruments": {
+      "보컬": "시이나 연우",
+      "기타": "민준하",
       "베이스": "문이빈",
       "드럼": "이아윤",
       "키보드": "서강"
     },
-    "Lyrics": "lyrics/longdream.txt",
-    "image": "songs/img/track_03.jpg",
+    "Lyrics": "lyrics/bon.txt",
+    "image": "songs/img/track_04.jpg",
     "duration":"4:18"
   },
   {
-    "title": "Ride",
-    "artist": "Wave To Earth",
+    "title": "Letter",
+    "artist": "유다빈밴드",
     "session": "1부",
     "instruments": {
-      "보컬": "이준수",
-      "기타": "이준수, 김종민",
-      "베이스": "이찬민",
-      "드럼": "우은규",
-      "키보드": "김신욱"
-    },
-    "Lyrics": "lyrics/ride.txt",
-    "image": "songs/img/track_04.jpg",
-    "duration":"3:47"
-  },
-  {
-    "title": "Coffee shop",
-    "artist": "Red Hot Chilli Peppers",
-    "session": "1부",
-    "instruments": {
-      "보컬": "김민재",
-      "기타": "민준하",
-      "베이스": "허원제",
-      "드럼": "이아윤"
+      "보컬": "최서윤",
+      "기타": "공병업, 김종민",
+      "베이스": "곽민찬",
+      "드럼": "서재현",
+      "키보드":"김신욱"
     },
     "image": "songs/img/track_05.jpg",
-    "Lyrics": "lyrics/coffee_shop.txt",
-    "duration":"3:11"
+    "Lyrics": "lyrics/letter.txt"
   },
   {
-    "title": "Just",
-    "artist": "Radiohead",
+    "title": "PINKTOP",
+    "artist": "The Volunteers",
     "session": "1부",
     "instruments": {
-      "보컬": "김민재",
-      "기타": "김민재, 민준하",
-      "베이스": "허원제",
+      "보컬": "김보민",
+      "기타": "이준수, 김보민",
+      "베이스": "곽민찬",
       "드럼": "이아윤"
     },
     "image": "songs/img/track_06.jpg",
-    "Lyrics": "lyrics/just.txt",
-    "duration":"3:54"
+    "Lyrics": "lyrics/pinktop.txt",
+    "description":"description/pinktop.txt"
   },
   {
-    "title": "파도",
-    "artist": "새소년",
+    "title": "S.A.D",
+    "artist": "The Volunteers",
     "session": "1부",
     "instruments": {
-      "보컬": "박송이",
-      "기타": "박송이",
-      "베이스": "문이빈",
+      "보컬": "김보민",
+      "기타": "이준수, 김보민",
+      "베이스": "곽민찬",
       "드럼": "이아윤"
     },
-    "image": "songs/img/track_07.jpg",
-    "Lyrics": "lyrics/wave.txt",
-    "duration":"4:42",
-    "description":"description/wave.txt"
+    "image": "songs/img/track_06.jpg",
+    "Lyrics": "lyrics/sad.txt"
   },
   {
-    "title": "나침반",
-    "artist": "한로로",
+    "title": "좋지 아니한가",
+    "artist": "유다빈밴드",
     "session": "1부",
     "instruments": {
-      "보컬": "이서영",
-      "기타": "고동빈",
-      "베이스": "송현우",
-      "드럼": "권민철",
-      "키보드": "김신욱"
+      "보컬": "최지원",
+      "기타": "허원제, 이준수",
+      "베이스": "전상수",
+      "드럼": "권기대",
+      "키보드": "천승욱"
     },
     "image": "songs/img/track_08.jpg",
-    "Lyrics": "lyrics/compass.txt",
-    "duration":"2:46"
+    "Lyrics": "lyrics/good.txt",
+    "duration":"3:33"
   },
   {
-    "title": "DP",
-    "artist": "청춘반란",
+    "title": "Decode",
+    "artist": "Paramore",
     "session": "1부",
     "instruments": {
-      "보컬": "김민재",
+      "보컬": "황수빈, 김민재",
       "기타": "김민재, 민준하",
       "베이스": "문이빈",
       "드럼": "이아윤"
     },
     "image": "songs/img/track_09.jpg",
-    "Lyrics": "lyrics/DP.txt",
-    "duration":"4:00",
-    "description":"description/dp.txt"
+    "Lyrics": "lyrics/Decode.txt"
   },
   {
-    "title": "업라이징",
-    "artist": "뮤즈",
+    "title": "Pink",
+    "artist": "Boris",
     "session": "1부",
     "instruments": {
-      "보컬": "최도윤",
-      "기타": "정의윤",
-      "베이스": "이휘성",
-      "드럼": "서재현",
-      "키보드": "장연우"
+      "보컬": "김민재",
+      "기타": "김민재, 민준하",
+      "베이스": "문이빈",
+      "드럼": "이아윤"
     },
-    "image": "songs/img/track_10.jpg",
-    "Lyrics": "lyrics/uprising.txt",
-    "duration":"5:04"
+    "image": "songs/img/track_99.jpg"
   },
   {
-    "title": "Endless Rain",
-    "artist": "X-Japan",
+    "title": "Far away",
+    "artist": "라쿠나",
+    "session": "1부",
+    "instruments": {
+      "보컬": "박민준",
+      "기타": "박민준, 류운비",
+      "베이스": "조성일",
+      "드럼": "권민철"
+    },
+    "image": "songs/img/track_10.jpg",
+    "Lyrics": "lyrics/far.txt",
+    "duration":"5:10"
+  },
+  {
+    "title": "음악만세",
+    "artist": "단편선 순간들",
     "session": "1부",
     "instruments": {
       "보컬": "최봄",
@@ -161,198 +168,169 @@
       "키보드": "온가은"
     },
     "image": "songs/img/track_11.jpg",
-    "Lyrics": "lyrics/endless_rain.txt",
-    "duration":"6:33"
+    "duration":"5:30"
   },
   {
-    "title": "좋은 밤 좋은 꿈",
-    "artist": "너드커넥션",
-    "session": "1부",
-    "instruments": {
-      "보컬": "이준수",
-      "기타": "고동빈, 이준수",
-      "베이스": "송현우",
-      "드럼": "권민철"
-    },
-    "image": "songs/img/track_12.jpg",
-    "Lyrics": "lyrics/gooddream.txt",
-    "duration":"4:26",
-    "description":"description/nerd.txt"
-  },
-  {
-    "title": "From the start",
+    "title": "Lover girl",
     "artist": "Laufey",
-    "session": "1부",
+    "session": "2부",
     "instruments": {
       "보컬": "오원택",
-      "기타": "고동빈",
-      "더블베이스": "박민준",
-      "드럼": "이아윤",
-      "색소폰": "박서형"
-    },
-    "image": "songs/img/track_13.jpg",
-    "Lyrics": "lyrics/fomrthestart.txt",
-    "duration":"2:49",
-    "description":"description/from_the_start.txt"
-  },
-  {
-    "title": "Butterfly",
-    "artist": "전영호",
-    "session": "2부",
-    "instruments": {
-      "보컬": "전상수",
-      "기타": "허원제, 신아현",
-      "베이스": "유승헌",
-      "드럼": "우은규"
+      "기타": "김종민",
+      "베이스": "이찬민",
+      "드럼": "조용준",
+      "키보드":"천승욱",
+      "플룻":"김기찬",
+      "색소폰":"박서형"
     },
     "image": "songs/img/track_14.jpg",
-    "Lyrics": "lyrics/buttefly.txt",
-    "duration":"4:17"
+    "Lyrics": "lyrics/lover.txt"
   },
   {
-    "title": "로켓트",
-    "artist": "잔나비",
+    "title": "어른",
+    "artist": "최예근밴드",
     "session": "2부",
     "instruments": {
-      "보컬": "공병업",
-      "기타": "고동빈",
+      "보컬": "최지원",
+      "기타": "김종민",
       "베이스": "석예준",
-      "드럼": "이아윤",
-      "키보드": "박지현"
+      "드럼": "우은규",
+      "키보드": "김예린"
     },
     "image": "songs/img/track_15.jpg",
-    "Lyrics": "lyrics/rocket.txt",
-    "duration":"3:40",
-    "description":"description/rocket.txt"
+    "Lyrics": "lyrics/adult.txt",
+    "duration":"3:47"
   },
   {
-    "title": "See Your Eyes",
-    "artist": "잔나비",
+    "title": "다시 만난 세계",
+    "artist": "소녀시대",
     "session": "2부",
     "instruments": {
-      "보컬": "공병업",
-      "기타": "고동빈",
-      "베이스": "석예준",
-      "드럼": "이아윤",
-      "키보드": "박지현"
+      "보컬": "강보민",
+      "기타": "김태환, 신아현",
+      "베이스": "전상수",
+      "드럼": "배주영",
+      "키보드": "천승욱"
     },
     "image": "songs/img/track_16.jpg",
-    "Lyrics": "lyrics/seeyoureyes.txt",
-    "duration":"3:11",
-    "description":"description/see_your_eyes.txt"
+    "Lyrics": "lyrics/sosi.txt"
   },
   {
-    "title": "눈이 마주쳤을 때",
-    "artist": "O.O.O",
+    "title": "나에게로 떠나는 여행",
+    "artist": "Buzz",
     "session": "2부",
     "instruments": {
       "보컬": "김민성",
-      "기타": "김가영, 조승현",
+      "기타": "김가영, 김효민",
       "베이스": "곽민찬",
-      "드럼": "강민성"
+      "드럼": "강민성",
+      "키보드":"배주영"
     },
     "image": "songs/img/track_17.jpg",
     "Lyrics": "lyrics/dulli.txt",
-    "duration":"3:17",
+    "duration":"3:28",
     "description":"description/dulli.txt"
   },
   {
-    "title": "괴수의꽃노래",
-    "artist": "바운디",
+    "title": "유영",
+    "artist": "카더가든, 유라",
     "session": "2부",
     "instruments": {
-      "보컬": "장연우",
-      "기타": "심영민, 김성수",
-      "베이스": "이휘성",
-      "드럼": "강민성",
-      "키보드": "윤하경"
+      "보컬": "공병업, 장재은",
+      "기타": "고동빈",
+      "베이스": "조성일",
+      "드럼": "권민철",
+      "키보드": "김신욱"
     },
     "image": "songs/img/track_18.jpg",
-    "Lyrics": "lyrics/kaiju.txt",
-    "duration":"3:43"
+    "Lyrics": "lyrics/dbdud.txt"
   },
   {
-    "title": "Seperate Ways",
-    "artist": "Journey",
+    "title": "재",
+    "artist": "한로로",
     "session": "2부",
     "instruments": {
-      "보컬": "허원제",
-      "기타": "조승현",
-      "베이스": "전상수",
-      "드럼": "우은규",
+      "보컬": "장재은",
+      "기타": "고동빈",
+      "베이스": "조성일",
+      "드럼": "권민철",
       "키보드": "김신욱"
     },
     "image": "songs/img/track_19.jpg",
-    "Lyrics": "lyrics/seperate ways.txt",
-    "duration":"5:23"
+    "Lyrics": "lyrics/ash.txt"
   },
   {
-    "title": "우리의 밤은 당신의 낮보다 아름답다",
-    "artist": "쏜애플",
+    "title": "금붕어",
+    "artist": "한로로",
     "session": "2부",
     "instruments": {
-      "보컬": "전사빈",
-      "기타": "민준하, 김민재",
-      "베이스": "우은규",
-      "드럼": "이아윤"
+      "보컬": "장재은",
+      "기타": "고동빈, 공병업",
+      "베이스": "조성일",
+      "드럼": "권민철",
+      "키보드":"김신욱"
     },
     "image": "songs/img/track_20.jpg",
-    "Lyrics": "lyrics/thornapple.txt",
-    "duration":"4:45"
+    "Lyrics": "lyrics/goldfish.txt"
   },
   {
-    "title": "에잇",
-    "artist": "아이유",
+    "title": "SHOUT",
+    "artist": "김경호",
     "instruments": {
-      "보컬": "강보민",
-      "기타": "신아현, 김태환",
-      "베이스": "전상수",
-      "드럼": "배주영",
-      "키보드": "천승욱"
+      "보컬": "최봄",
+      "기타": "김효민"
     },
-    "Lyrics": "lyrics/eight.txt",
-    "image": "songs/img/track_21.jpg",
-    "duration":"2:47"
+    "Lyrics": "lyrics/shout.txt",
+    "image": "songs/img/track_21.jpg"
   },
   {
-    "title": "오르트구름",
-    "artist": "윤하",
+    "title": "Paradise City",
+    "artist": "Guns N' Roses",
     "instruments": {
-      "보컬": "최서윤",
-      "기타": "신아현, 허원제",
-      "베이스": "전상수",
-      "드럼": "배주영",
-      "키보드": "천승욱"
+      "보컬": "허원제",
+      "기타": "고동빈, 김효민",
+      "베이스": "윤신이",
+      "드럼": "우은규"
     },
-    "Lyrics": "lyrics/오르트구름.txt",
-    "image": "songs/img/track_22.jpg",
-    "duration":"3:26"
+    "Lyrics": "lyrics/paradise.txt",
+    "image": "songs/img/track_22.jpg"
   },
   {
-    "title": "새벽별",
-    "artist": "터치드",
+    "title": "Sweet Child O' Mine",
+    "artist": "Guns N' Roses",
     "instruments": {
-      "보컬": "장재은",
-      "기타": "류운비",
-      "베이스": "이찬민",
-      "드럼": "권민철",
-      "키보드": "서강"
+      "보컬": "허원제",
+      "기타": "고동빈, 김효민",
+      "베이스": "윤신이",
+      "드럼": "우은규"
     },
-    "Lyrics": "lyrics/dawnstar.txt",
-    "image": "songs/img/track_23.jpg",
-    "duration":"4:29"
+    "Lyrics": "lyrics/sweet.txt",
+    "image": "songs/img/track_22.jpg"
   },
   {
-    "title": "넌 내게 반했어",
-    "artist": "노브레인",
+    "title": "Dazed & Confused",
+    "artist": "GlenCheck",
     "instruments": {
-      "보컬": "송현우",
-      "기타": "허원제",
-      "베이스": "우은규",
-      "드럼": "박송이"
+      "보컬": "이준수",
+      "기타": "이준수",
+      "베이스": "민준하",
+      "드럼": "강민성",
+      "신디사이저":"이한진"
     },
-    "Lyrics": "lyrics/넌 내게 반했어.txt",
-    "image": "songs/img/track_24.jpg",
-    "duration":"3:44"
+    "Lyrics": "lyrics/dazed.txt",
+    "image": "songs/img/track_24.jpg"
+  },
+  {
+    "title": "4ever",
+    "artist": "GlenCheck",
+    "instruments": {
+      "보컬": "이준수",
+      "기타": "이준수",
+      "베이스": "민준하",
+      "드럼": "강민성",
+      "신디사이저":"이한진"
+    },
+    "Lyrics": "lyrics/4ever.txt",
+    "image": "songs/img/track_24.jpg"
   }
 ]
