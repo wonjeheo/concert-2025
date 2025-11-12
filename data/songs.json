@@ -277,7 +277,9 @@
     "artist": "김경호",
     "instruments": {
       "보컬": "최봄",
-      "기타": "김효민"
+      "기타": "김효민, 김가영",
+      "드럼": "조용준",
+      "베이스": "곽민찬"
     },
     "Lyrics": "lyrics/shout.txt",
     "image": "songs/img/track_21.jpg"
